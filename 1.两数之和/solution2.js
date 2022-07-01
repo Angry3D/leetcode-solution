@@ -3,16 +3,16 @@
  * @param {number} target
  * @return {number[]}
  */
- var twoSum = function(nums, target) {
-  const diffMap = {};
-  for (let i = 0; i < nums.length; ++i) {
-    const num = nums[i];
-    if (num in diffMap) {
-      return [i, diffMap[num]];
+module.exports = function twoSum(nums, target) {
+    const diffMap = {}
+    for (let i = 0; i < nums.length; ++i) {
+        const num = nums[i]
+        if (num in diffMap) {
+            return [i, diffMap[num]]
+        }
+        diffMap[target - num] = i
     }
-    diffMap[target - num] = i;
-  }
-};
+}
 
 /**
  * 思路：动态规划，减少一层循环
