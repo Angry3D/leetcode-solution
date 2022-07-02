@@ -7,7 +7,7 @@ module.exports = function lengthOfLongestSubstring(s) {
         curSubStr = ''
     const strLen = s.length
     for (let start = 0; start < strLen; ++start) {
-        // 动态规划：end = start + curSubStr.length，因为之前的子串肯定不重复，end 直接跳过之前的子串
+        // 加速索引递增：end = start + curSubStr.length，因为之前的子串肯定不重复，end 直接跳过之前的子串
         for (let end = start + curSubStr.length; end < strLen + 1; ++end) {
             const str = s.substring(start, end)
             // console.log(str)

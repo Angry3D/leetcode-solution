@@ -3,11 +3,11 @@
  * @return {string}
  */
 module.exports = function longestPalindrome(s) {
-    if (s.length <= 1) {
+    const strLen = s.length
+    if (strLen <= 1) {
         return s
     }
-    const strLen = s.length,
-        sAry = s.split('')
+    const sAry = s.split('')
     let start = 0,
         maxLen = 1
     for (let i = 0; i < strLen; ++i) {
