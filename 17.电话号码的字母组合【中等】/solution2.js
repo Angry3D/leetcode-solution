@@ -19,16 +19,16 @@ module.exports = function letterCombinations(digits) {
     9: ['w', 'x', 'y', 'z']
   }
 
-  function _resolver(digits) {
-    if (digits.length === 0) {
+  function _resolver(_digits) {
+    if (_digits.length === 0) {
       return []
     }
-    const digit = digits[0]
+    const digit = _digits[0]
     const curResult = dict[digit]
     if (!curResult) {
       return []
     }
-    const nextResult = _resolver(digits.slice(1))
+    const nextResult = _resolver(_digits.slice(1))
     let result = []
     if (nextResult.length) {
       for (const curItem of curResult) {
