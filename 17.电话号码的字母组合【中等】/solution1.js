@@ -74,7 +74,7 @@ module.exports = function letterCombinations(digits) {
 }
 
 /**
- * 常规思路：
+ * 顺序解题思路：
  * 1. 收集按键的字母集合
  * 2. 模拟排列组合，将每个按键的字母进行组合并压入数组
  */
