@@ -6,6 +6,6 @@ exports.test = function (solutionName, ...args) {
     throw new Error(`${solutionName} is not a function!!`)
   }
   console.time(solutionName)
-  console.log(solutionFunc.apply(this, args))
+  console.log('result: ', solutionFunc.apply(this, args))
   console.timeEnd(solutionName)
 }
