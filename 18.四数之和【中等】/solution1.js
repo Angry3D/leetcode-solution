@@ -9,8 +9,7 @@ module.exports = function fourSum(nums, target) {
   }
 
   const ascNums = nums.sort((a, b) => a - b)
-  const result = [],
-    resultTagSet = new Set()
+  const result = []
 
   // console.log(ascNums)
 
@@ -21,24 +20,19 @@ module.exports = function fourSum(nums, target) {
       const sum = ascNums[start] + ascNums[left] + ascNums[right] + ascNums[end]
       // console.log(sum, start, left, right, end)
       if (sum == target) {
-        const sortTag = [
+        result.push([
           ascNums[start],
           ascNums[left],
           ascNums[right],
           ascNums[end]
-        ]
-          .sort((a, b) => a - b)
-          .join()
-        if (!resultTagSet.has(sortTag)) {
-          result.push([
-            ascNums[start],
-            ascNums[left],
-            ascNums[right],
-            ascNums[end]
-          ])
-          resultTagSet.add(sortTag)
+        ])
+        while (left < right && ascNums[left] == ascNums[left + 1]) {
+          left++
         }
         left++
+        while (left < right && ascNums[right] == ascNums[right - 1]) {
+          right--
+        }
         right--
       } else if (sum < target) {
         left++
@@ -52,9 +46,15 @@ module.exports = function fourSum(nums, target) {
     if (target >= 0 && ascNums[start] > target) {
       break
     }
-    for (let end = ascNums.length - 1; end >= 0; end--) {
+    if (start > 0 && ascNums[start] == ascNums[start - 1]) {
+      continue
+    }
+    for (let end = ascNums.length - 1; end >= start + 3; end--) {
       if (target < 0 && ascNums[end] < target) {
         break
+      }
+      if (end < ascNums.length - 1 && ascNums[end] == ascNums[end + 1]) {
+        continue
       }
       _resolver(start, end)
     }
