@@ -19,23 +19,30 @@ module.exports = function letterCombinations(digits) {
     9: ['w', 'x', 'y', 'z']
   }
 
-  if (digits.length === 0) {
-    return []
-  }
-  const digit = digits[0]
-  const curResult = dict[digit]
-  const nextResult = letterCombinations(digits.slice(1))
-  let result = []
-  if (nextResult.length) {
-    for (const curItem of curResult) {
-      for (const nextItem of nextResult) {
-        result.push(curItem + nextItem)
-      }
+  function _resolver(digits) {
+    if (digits.length === 0) {
+      return []
     }
-  } else {
-    result = [...curResult]
+    const digit = digits[0]
+    const curResult = dict[digit]
+    if (!curResult) {
+      return []
+    }
+    const nextResult = _resolver(digits.slice(1))
+    let result = []
+    if (nextResult.length) {
+      for (const curItem of curResult) {
+        for (const nextItem of nextResult) {
+          result.push(curItem + nextItem)
+        }
+      }
+    } else {
+      result = [...curResult]
+    }
+    return result
   }
-  return result
+
+  return _resolver(digits)
 }
 
 /**
