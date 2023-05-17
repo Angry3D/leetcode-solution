@@ -1,3 +1,9 @@
+/**
+ * 快速移除 LeetCode 题目
+ *
+ * 命令行格式：node utils/remove 标题
+ */
+
 const [, , folderName] = process.argv
 
 if (!folderName) {

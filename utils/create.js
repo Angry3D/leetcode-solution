@@ -1,3 +1,13 @@
+/**
+ * 快速创建 LeetCode 题目，结构如下：
+ * - xx.标题
+ * -- README.md
+ * -- solution1.js
+ * -- test.js
+ *
+ * 命令行格式：node utils/create 标题
+ */
+
 const [, , folderName] = process.argv
 
 if (!folderName) {
