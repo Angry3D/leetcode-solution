@@ -19,12 +19,12 @@ function createList(array) {
   return head
 }
 
+/**
+ * 链表节点构造函数
+ */
 function ListNode(val, next) {
   this.val = val === undefined ? 0 : val
   this.next = next === undefined ? null : next
-  // this.toString = () => {
-  //   return 'haha'
-  // }
 }
 
 module.exports = {
