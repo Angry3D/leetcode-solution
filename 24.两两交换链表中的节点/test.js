@@ -1,6 +1,12 @@
 const utils = require('../utils')
 const list = require('../common/list')
 
-const head = list.createList([1, 2, 3, 4])
+const head = list.createList([1, 2, 3])
 
-utils.test('solution1', head)
+utils.test(
+  {
+    solutionName: 'solution1',
+    logMode: 'deep'
+  },
+  head
+)
