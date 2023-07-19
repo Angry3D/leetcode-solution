@@ -19,5 +19,5 @@ module.exports = function removeDuplicates(nums) {
 }
 
 /**
- * 迭代方式
+ * 迭代，并交换元素
  */
