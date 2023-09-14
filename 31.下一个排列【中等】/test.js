@@ -1,5 +1,11 @@
 const utils = require('../utils')
 
-const nums = [1, 2, 3]
+const nums = [3, 2, 1]
 
-utils.test('solution1', nums)
+utils.test(
+  {
+    solution: 'solution1',
+    logMode: 'origin'
+  },
+  nums
+)

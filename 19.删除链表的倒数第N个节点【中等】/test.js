@@ -6,7 +6,7 @@ const head = list.createList([1, 2, 3, 4, 5]),
 
 // utils.test(
 //   {
-//     solutionName: 'solution1',
+//     solution: 'solution1',
 //     logMode: 'deep'
 //   },
 //   head,
@@ -15,7 +15,7 @@ const head = list.createList([1, 2, 3, 4, 5]),
 
 utils.test(
   {
-    solutionName: 'solution2',
+    solution: 'solution2',
     logMode: 'deep'
   },
   head,

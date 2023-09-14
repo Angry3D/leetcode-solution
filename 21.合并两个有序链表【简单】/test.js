@@ -9,7 +9,7 @@ const l1 = list.createList([]),
 
 utils.test(
   {
-    solutionName: 'solution1',
+    solution: 'solution1',
     logMode: 'deep'
   },
   l1,
