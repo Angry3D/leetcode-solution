@@ -4,17 +4,20 @@
 
 请  **不要使用除法，** 且在 `O(n)` 时间复杂度内完成此题。
 
+
 **示例 1:**
 
-<pre><strong>输入:</strong> nums = <code>[1,2,3,4]</code>
-<strong>输出:</strong> <code>[24,12,8,6]</code>
+<pre><strong>输入:</strong> nums = [1,2,3,4]
+<strong>输出:</strong> [24,12,8,6]
 </pre>
+
 
 **示例 2:**
 
 <pre><strong>输入:</strong> nums = [-1,1,0,-3,3]
 <strong>输出:</strong> [0,0,9,0,0]
 </pre>
+
 
 **提示：**
 
