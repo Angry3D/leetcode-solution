@@ -46,4 +46,7 @@ module.exports = function compress(chars) {
  * 3. 直到 readIndex 遍历结束
  *
  * 可优化的地方：这里可以不统计 currentCount，转而使用 readIndex - writeIndex 来计算
+ * 
+ * 时间复杂度：O(n)
+ * 空间复杂度：O(1)
  */
