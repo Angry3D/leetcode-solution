@@ -1,3 +1,3 @@
 const utils = require('../utils');
 
-utils.test('solution1', 'axc', 'ahbgdc');
+utils.test('solution2', 'abc', 'ahbgdc');
