@@ -20,5 +20,5 @@ module.exports = function maxArea(height) {
 /**
  * 暴力求解，LeetCode模拟器运行会超时
  * 
- * 这种算法的时间复杂度为 O(n^2)
+ * 时间复杂度为 O(n^2)
  */
