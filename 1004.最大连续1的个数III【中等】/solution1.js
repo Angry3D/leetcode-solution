@@ -38,4 +38,7 @@ module.exports = function longestOnes(nums, k) {
  * 2. 先移动 right，直到 k 被消耗完
  * 3. 开始移动 left，直到跳过第一个 0，然后再移动一次 right，为了后续判断
  * 4. 返回最大值
+ * 
+ * 时间复杂度：O(n)
+ * 空间复杂度：O(1)
  */
