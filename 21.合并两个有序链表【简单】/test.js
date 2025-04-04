@@ -1,5 +1,5 @@
 const utils = require('../utils')
-const list = require('../common/list')
+const list = require('../utils/list')
 
 // const l1 = list.createList([1, 2, 4]),
 //   l2 = list.createList([1, 3, 4])

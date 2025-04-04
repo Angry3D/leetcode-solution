@@ -1,4 +1,5 @@
 const path = require('path');
+const { listToArray } = require('./list');
 
 exports.test = function (options, ...args) {
   let solution,
@@ -25,6 +26,10 @@ exports.test = function (options, ...args) {
     const result = solutionFunc.apply(this, args);
     console.log('result: ', result);
     console.log('origin: ', ...args);
+  } else if (logMode === 'list') {
+    const result = solutionFunc.apply(this, args);
+    const array = listToArray(result);
+    console.log('result: ', array);
   }
   console.timeEnd(solution);
 };
